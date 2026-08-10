@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPosts, getPages, urlFor, formatDate, type ArchiveEntry } from '../../lib/entries';
+
+export async function getStaticPaths() {
+  const entries: ArchiveEntry[] = [...(await getPosts()), ...(await getPages())];
+  const tags = new Set(entries.flatMap((entry) => entry.data.tags));
+
+  return [...tags].map((tag) => ({
+    params: { tag },
+    props: { entries: entries.filter((entry) => entry.data.tags.includes(tag)) },
+  }));
+}
+
+const { tag } = Astro.params;
+const { entries } = Astro.props;
+---
+
+<BaseLayout title={`Tagged: ${tag}`} description={`Open+ML issues tagged ${tag}.`}>
+  <h1>Tagged: {tag}</h1>
+  <p class="lede">{entries.length} {entries.length === 1 ? 'entry' : 'entries'}</p>
+  <ul class="entry-list">
+    {entries.map((entry) => (
+      <li>
+        <time datetime={entry.data.date.toISOString()}>{formatDate(entry.data.date)}</time>
+        <a href={urlFor(entry)}>{entry.data.title}</a>
+        {entry.data.description && <p class="excerpt">{entry.data.description}</p>}
+      </li>
+    ))}
+  </ul>
+  <p><a href="/tags/">All tags</a></p>
+</BaseLayout>

@@ -1,0 +1,77 @@
+---
+import { getPosts } from '../lib/entries';
+
+/**
+ * Publishing rhythm across the newsletter's whole span, one bar per month.
+ *
+ * A reverse-chronological list flattens time -- it can't show that the archive
+ * opens with a burst, thins out, goes quiet for ten months, comes back, and
+ * then stops. That shape is the story of the newsletter, and it's why the
+ * masthead called it "(ir)regular".
+ */
+const posts = await getPosts();
+
+const stamp = (date: Date) =>
+  `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, '0')}`;
+
+const counts = new Map<string, number>();
+for (const post of posts) {
+  const key = stamp(post.data.date);
+  counts.set(key, (counts.get(key) ?? 0) + 1);
+}
+
+const first = posts[posts.length - 1].data.date;
+const last = posts[0].data.date;
+
+const months: { key: string; count: number; label: string }[] = [];
+const cursor = new Date(Date.UTC(first.getUTCFullYear(), first.getUTCMonth(), 1));
+const end = new Date(Date.UTC(last.getUTCFullYear(), last.getUTCMonth(), 1));
+
+while (cursor <= end) {
+  const key = stamp(cursor);
+  months.push({
+    key,
+    count: counts.get(key) ?? 0,
+    label: cursor.toLocaleDateString('en-US', {
+      month: 'long',
+      year: 'numeric',
+      timeZone: 'UTC',
+    }),
+  });
+  cursor.setUTCMonth(cursor.getUTCMonth() + 1);
+}
+
+const busiest = Math.max(...months.map((m) => m.count));
+const silent = months.filter((m) => m.count === 0).length;
+
+// Longest unbroken run of months with no issue.
+let longestGap = 0;
+let run = 0;
+for (const month of months) {
+  run = month.count === 0 ? run + 1 : 0;
+  longestGap = Math.max(longestGap, run);
+}
+
+const height = (count: number) => (count === 0 ? 3 : 12 + (count / busiest) * 32);
+---
+
+<figure class="cadence">
+  <div class="cadence-strip" role="img" aria-label={`Publishing rhythm: ${posts.length} issues across ${months.length} months, ${silent} of them silent. The longest gap was ${longestGap} months.`}>
+    {months.map((month) => (
+      <div
+        class="cadence-month"
+        data-count={month.count}
+        style={`height: ${height(month.count)}px`}
+        title={`${month.label} — ${month.count === 0 ? 'no issues' : `${month.count} issue${month.count === 1 ? '' : 's'}`}`}
+      />
+    ))}
+  </div>
+  <div class="cadence-axis">
+    <span>{first.getUTCFullYear()}</span>
+    <span>{last.getUTCFullYear()}</span>
+  </div>
+  <figcaption class="cadence-note">
+    {posts.length} issues across {months.length} months. {silent} of those months
+    were silent, including one stretch of {longestGap}.
+  </figcaption>
+</figure>

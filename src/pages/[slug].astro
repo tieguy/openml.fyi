@@ -1,0 +1,54 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { formatDate } from '../lib/entries';
+
+// Posts and pages share one flat namespace, matching Ghost. Slugs are
+// collision-free across the two collections (verified against the backup).
+export async function getStaticPaths() {
+  const entries = [...(await getCollection('posts')), ...(await getCollection('pages'))];
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, date, updated, description, tags, feature_image, feature_image_alt } = entry.data;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  ogType="article"
+  ogImage={feature_image}
+  publishedTime={date.toISOString()}
+>
+  <article class="entry">
+    <header class="entry-header">
+      <h1>{title}</h1>
+      <p class="entry-meta">
+        <time datetime={date.toISOString()}>{formatDate(date)}</time>
+        {updated && updated.valueOf() !== date.valueOf() && (
+          <span class="updated">updated {formatDate(updated)}</span>
+        )}
+      </p>
+      {tags.length > 0 && (
+        <ul class="tag-list">
+          {tags.map((tag) => (
+            <li><a href={`/tags/${tag}/`}>{tag}</a></li>
+          ))}
+        </ul>
+      )}
+    </header>
+
+    {feature_image && (
+      <img class="feature-image" src={feature_image} alt={feature_image_alt ?? ''} />
+    )}
+
+    <div class="e-content">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

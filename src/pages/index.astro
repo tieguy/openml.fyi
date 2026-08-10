@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { urlFor, formatDate, type ArchiveEntry } from '../lib/entries';
+
+// Hand-picked, not derived from Ghost's `featured` flag -- see the design plan.
+// The archive is a finished body of work, so the landing page leads with the
+// pieces worth reading rather than the most recent issue.
+const CURATED = [
+  'openish-is-dead-long-live-openish',
+  'agent-of-change-three-years-in',
+  'printing',
+  'ish',
+  'open-data-entities',
+];
+
+const all: ArchiveEntry[] = [
+  ...(await getCollection('posts')),
+  ...(await getCollection('pages')),
+];
+const bySlug = new Map(all.map((entry) => [entry.id, entry]));
+const curated = CURATED.map((slug) => bySlug.get(slug)).filter(
+  (entry): entry is ArchiveEntry => entry !== undefined
+);
+
+const recent = all
+  .filter((entry) => !CURATED.includes(entry.id))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 5);
+---
+
+<BaseLayout title="Open+ML">
+  <section class="intro">
+    <h1>Open+ML</h1>
+    <!-- The closing sentence is Luis's. The descriptive sentence before it is
+         still a draft and wants his pass. -->
+    <p class="lede">
+      From September 2022 to April 2026 I used this newsletter to think out loud
+      about the collision of open and machine learning — what “open” even means
+      when the artifact is a model, who ends up holding power, and what the open
+      movements should do about it. It has concluded, so that I can focus more on
+      learning by doing.
+    </p>
+  </section>
+
+  <section class="curated">
+    <h2>Start here</h2>
+    <ul class="entry-list">
+      {curated.map((entry) => (
+        <li>
+          <time datetime={entry.data.date.toISOString()}>{formatDate(entry.data.date)}</time>
+          <a href={urlFor(entry)}>{entry.data.title}</a>
+          {entry.data.description && <p class="excerpt">{entry.data.description}</p>}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="recent">
+    <h2>Issues</h2>
+    <ul class="entry-list">
+      {recent.map((entry) => (
+        <li>
+          <time datetime={entry.data.date.toISOString()}>{formatDate(entry.data.date)}</time>
+          <a href={urlFor(entry)}>{entry.data.title}</a>
+        </li>
+      ))}
+    </ul>
+    <p><a href="/archive/">All issues →</a></p>
+  </section>
+</BaseLayout>

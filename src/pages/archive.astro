@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPosts, urlFor, formatDate } from '../lib/entries';
+import Cadence from '../components/Cadence.astro';
+
+const posts = await getPosts();
+
+// Group by year so four years of issues stay scannable.
+const byYear = new Map<number, typeof posts>();
+for (const post of posts) {
+  const year = post.data.date.getUTCFullYear();
+  byYear.set(year, [...(byYear.get(year) ?? []), post]);
+}
+const years = [...byYear.keys()].sort((a, b) => b - a);
+---
+
+<BaseLayout title="Archive" description="Every issue of Open+ML, 2022-2026.">
+  <h1>Archive</h1>
+  <p class="lede">All {posts.length} issues, newest first.</p>
+
+  <Cadence />
+
+  {years.map((year) => (
+    <section class="year">
+      <h2>{year}</h2>
+      <ul class="entry-list">
+        {byYear.get(year)!.map((post) => (
+          <li>
+            <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+            <a href={urlFor(post)}>{post.data.title}</a>
+            {post.data.description && <p class="excerpt">{post.data.description}</p>}
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</BaseLayout>

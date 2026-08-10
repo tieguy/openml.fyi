@@ -1,0 +1,26 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Ghost served the feed at /rss/. Rewrite (200, not redirect) so subscribers'
+# readers keep polling the exact URL they already have.
+[[redirects]]
+  from = "/rss/"
+  to = "/rss.xml"
+  status = 200
+
+[[redirects]]
+  from = "/rss"
+  to = "/rss.xml"
+  status = 200
