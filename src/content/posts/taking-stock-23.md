@@ -1,5 +1,5 @@
 ---
-title: Taking stock of open(ish) machine learning / 2023-06-15
+title: Taking stock of open(ish) machine learning
 date: '2023-06-15'
 description: I’ve been writing this newsletter for about six months, so I thought
   it might be a good time to pause the news firehose, and instead review and synthesize

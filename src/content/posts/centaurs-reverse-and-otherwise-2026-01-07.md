@@ -1,5 +1,5 @@
 ---
-title: Centaurs, reverse and otherwise / 2026-01-07
+title: Centaurs, reverse and otherwise
 date: '2026-01-07'
 description: If the first wave of LLM criticism is on life-support, what ethical questions
   do we face now? And how can/should open engage?

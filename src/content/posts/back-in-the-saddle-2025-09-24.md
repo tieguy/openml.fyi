@@ -1,5 +1,5 @@
 ---
-title: Back in the Saddle / 2025-09-24
+title: Back in the Saddle
 date: '2025-09-24'
 description: Vocabulary, ethics, and disclosures, and some news and links from The
   Week That Was in AI + Open.

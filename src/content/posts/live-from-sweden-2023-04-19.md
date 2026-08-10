@@ -1,5 +1,5 @@
 ---
-title: Live from Sweden / 2023-04-19
+title: Live from Sweden
 date: '2023-04-19'
 description: Upcoming public panel moderation; shifting power via foundation models
   (open or not); public ability to understand via great WaPo visualization; modularity;

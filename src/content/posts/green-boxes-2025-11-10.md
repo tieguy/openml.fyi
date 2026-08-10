@@ -1,5 +1,5 @@
 ---
-title: Green boxes / 2025-11-10
+title: Green boxes
 date: '2025-11-10'
 description: Thinking about actually writing code instead of writing newsletters,
   as well as a lot of other open+ml news.

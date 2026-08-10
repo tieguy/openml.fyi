@@ -1,5 +1,5 @@
 ---
-title: all this power / 2024-03-09
+title: all this power
 date: '2024-03-09'
 description: Getting angry about Senator Vance’s call for… open? and some good examples
   of what smart open could look like.

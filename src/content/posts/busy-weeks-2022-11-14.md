@@ -1,5 +1,5 @@
 ---
-title: busy weeks / 2022-11-14
+title: busy weeks
 date: '2022-11-14'
 description: The newsletter has been quiet, but the world has not. Some thoughts after
   a couple of very busy weeks.

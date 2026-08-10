@@ -1,5 +1,5 @@
 ---
-title: need ML to generate halloween puns / 2022-10-28
+title: need ML to generate halloween puns
 date: '2022-10-28'
 description: No big meta-themes this week. Enjoy Halloween :)
 tags:

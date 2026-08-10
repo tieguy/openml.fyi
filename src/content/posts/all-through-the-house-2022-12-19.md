@@ -1,5 +1,5 @@
 ---
-title: all through the house / 2022-12-19
+title: all through the house
 date: '2022-12-19'
 description: I've been under the weather and busy at work, so things have been sporadic.
   I look forward to doing this more steadily in the new year. The rest of the world

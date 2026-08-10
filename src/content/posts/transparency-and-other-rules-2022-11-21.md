@@ -1,5 +1,5 @@
 ---
-title: Transparency and other rules / 2022-11-21
+title: Transparency and other rules
 date: '2022-11-22'
 description: RAIL adoption; observations on “release early, release often” in ML;
   and a micro-essay on transparency.
