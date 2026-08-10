@@ -20,6 +20,20 @@ npm run build    # static build to dist/
 npm run check    # astro check
 ```
 
+## Deploying
+
+Deploys are **manual**, on purpose. The Netlify site was created from the CLI,
+which doesn't configure a GitHub webhook, and the archive is frozen enough that
+push-to-deploy isn't worth wiring up:
+
+```bash
+npm run build
+npx netlify-cli deploy --prod --dir=dist
+```
+
+Netlify project `openml-fyi` (`a1c976c1-45a4-469b-adf9-ba5b76ed1171`), team
+`tieguy`.
+
 ## How the content got here
 
 The archive was migrated off Ghost(Pro). Two tools in the
