@@ -10,6 +10,8 @@ tags:
 feature_image: /images/content/images/2023/01/ED9BDBCF-0C4B-404D-A544-19F7DF074223.png
 feature_image_alt: A cartoonish cupcake, with a speech bubble saying “2022”, generated
   by Stable Diffusion 2.1
+feature_image_caption: I tried a <em>lot</em> of times to get this to say 2023. Just
+  not in the training set?
 ghost_id: 63be11edb5f70c003d3c1029
 ---
 

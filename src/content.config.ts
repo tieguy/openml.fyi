@@ -14,6 +14,9 @@ const shared = {
   tags: z.array(z.string()).default([]),
   feature_image: z.string().optional(),
   feature_image_alt: z.string().optional(),
+  // HTML, and usually a CC attribution line -- a licensing obligation, not
+  // decoration. Rendered under the feature image.
+  feature_image_caption: z.string().optional(),
   // Ghost's own curation flag, kept as a record. Does not drive the front page.
   featured: z.boolean().default(false),
   // Ghost's internal object id, so a record here can be traced back to the

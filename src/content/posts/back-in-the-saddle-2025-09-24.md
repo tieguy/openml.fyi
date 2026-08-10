@@ -10,6 +10,13 @@ tags:
 - defining-open
 feature_image: /images/content/images/2025/09/52336503784_0e63714551_c.jpg
 feature_image_alt: A variety of horse-themes sculptures, set in the middle of a desert.
+feature_image_caption: '<span style="white-space: pre-wrap;">"</span><a href="https://www.flickr.com/photos/55893585@N08/52336504209"
+  rel="noopener noreferrer"><span style="white-space: pre-wrap;">Wild Horse Art</span></a><span
+  style="white-space: pre-wrap;">" by&nbsp;</span><a href="https://www.flickr.com/photos/55893585@N08"
+  rel="noopener noreferrer"><span style="white-space: pre-wrap;">BLM Nevada</span></a><span
+  style="white-space: pre-wrap;">&nbsp;is licensed under&nbsp;</span><a href="https://creativecommons.org/licenses/by/2.0/?ref=openverse"
+  rel="noopener noreferrer"><span style="white-space: pre-wrap;">CC BY 2.0</span></a><span
+  style="white-space: pre-wrap;">.</span>'
 ghost_id: 68d2c3087de5b00001735630
 ---
 

@@ -11,6 +11,15 @@ tags:
 feature_image: /images/content/images/2025/09/2443750706_da6b90b400_c.jpg
 feature_image_alt: A marble sculpture of a child under an early printing press, and
   over a cornocupia that (unusually) has not only fruits but also letter blocks.
+feature_image_caption: '<span style="white-space: pre-wrap;">The printing press as
+  cornucopia, from the Library of Congress building. "</span><a href="https://www.flickr.com/photos/38782010@N00/2443750706"
+  rel="noopener noreferrer"><span style="white-space: pre-wrap;">Putto with Screw
+  Printing Press, Alphabet, &amp; Cornucopia (Washington, DC)</span></a><span style="white-space:
+  pre-wrap;">" by&nbsp;</span><a href="https://www.flickr.com/photos/38782010@N00"
+  rel="noopener noreferrer"><span style="white-space: pre-wrap;">takomabibelot</span></a><span
+  style="white-space: pre-wrap;">&nbsp;is licensed under&nbsp;</span><a href="https://creativecommons.org/licenses/by/2.0/?ref=openverse"
+  rel="noopener noreferrer"><span style="white-space: pre-wrap;">CC BY 2.0</span></a><span
+  style="white-space: pre-wrap;">.</span>'
 featured: true
 ghost_id: 68c9fadf70cf4800017d5bd6
 ---

@@ -15,6 +15,7 @@ tags:
 feature_image: /images/content/images/2022/12/D54C1104-2BA2-4033-9069-29A86B54B4A9.png
 feature_image_alt: Two impressionistic Santas dancing under palm trees, generated
   by machine learning
+feature_image_caption: Dancing santas under palm trees, Stable Diffusion 2.0
 ghost_id: 63a08fb5edb6d1003d158334
 ---
 

@@ -9,6 +9,14 @@ tags:
 - labor
 - power
 feature_image: /images/content/images/2026/01/1024px-Antonio_Canova_Teseo_defeats_the_centaur.jpg
+feature_image_caption: '<span style="white-space: pre-wrap;">"</span><a href="https://commons.wikimedia.org/w/index.php?curid=86003279"
+  rel="noopener noreferrer"><span style="white-space: pre-wrap;">Antonio Canova Teseo
+  defeats the centaur</span></a><span style="white-space: pre-wrap;">" by </span><a
+  href="https://commons.wikimedia.org/wiki/User:Falcodigiada" rel="noopener noreferrer"><span
+  style="white-space: pre-wrap;">Falcodigiada</span></a><span style="white-space:
+  pre-wrap;"> is licensed under </span><a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=openverse"
+  rel="noopener noreferrer"><span style="white-space: pre-wrap;">CC BY-SA 4.0</span></a><span
+  style="white-space: pre-wrap;">.</span>'
 ghost_id: 695e9505684da30001919f96
 ---
 

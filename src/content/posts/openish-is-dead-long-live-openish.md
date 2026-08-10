@@ -8,6 +8,15 @@ tags:
 - defining-open
 - power
 feature_image: /images/content/images/2026/04/6498328835_54ccf312d8_c.jpg
+feature_image_caption: '<span style="white-space: pre-wrap;">"</span><a href="https://www.flickr.com/photos/8489692@N03/6498328835"
+  rel="noopener noreferrer"><span style="white-space: pre-wrap;">“We live in a wonderful
+  world that is full of beauty, charm and adventure. There is no end to the adventures
+  we can have if only we seek them with our eyes open.” – Jawaharial Nehru</span></a><span
+  style="white-space: pre-wrap;">" by </span><a href="https://www.flickr.com/photos/8489692@N03"
+  rel="noopener noreferrer"><span style="white-space: pre-wrap;">katerha</span></a><span
+  style="white-space: pre-wrap;"> is licensed under </span><a href="https://creativecommons.org/licenses/by/2.0/?ref=openverse"
+  rel="noopener noreferrer"><span style="white-space: pre-wrap;">CC BY 2.0</span></a><span
+  style="white-space: pre-wrap;">.</span>'
 featured: true
 ghost_id: 69ebe658b1aacb0001ad05f1
 ---

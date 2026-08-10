@@ -15,7 +15,16 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const { title, date, updated, description, tags, feature_image, feature_image_alt } = entry.data;
+const {
+  title,
+  date,
+  updated,
+  description,
+  tags,
+  feature_image,
+  feature_image_alt,
+  feature_image_caption,
+} = entry.data;
 ---
 
 <BaseLayout
@@ -44,7 +53,12 @@ const { title, date, updated, description, tags, feature_image, feature_image_al
     </header>
 
     {feature_image && (
-      <img class="feature-image" src={feature_image} alt={feature_image_alt ?? ''} />
+      <figure class="feature">
+        <img class="feature-image" src={feature_image} alt={feature_image_alt ?? ''} />
+        {feature_image_caption && (
+          <figcaption set:html={feature_image_caption} />
+        )}
+      </figure>
     )}
 
     <div class="e-content">

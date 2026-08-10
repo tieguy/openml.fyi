@@ -9,6 +9,8 @@ tags:
 feature_image: /images/content/images/2022/10/LuisVilla4_sculpture_of_a_reclining_philosopher_with_jack-o-lan_1a8008b4-3407-4627-9337-2a1a88069825.png
 feature_image_alt: A marble bust surrounded by leaves, over a background of poorly-generated
   jack-o-lanterns.
+feature_image_caption: 'midjourney: sculpture of a reclining philosopher with jack-o-lantern
+  head, white marble, background of colorful fall leaves'
 ghost_id: 635c1b23fd45cf003d70d643
 ---
 

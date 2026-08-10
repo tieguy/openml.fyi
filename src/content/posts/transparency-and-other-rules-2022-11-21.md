@@ -9,6 +9,7 @@ tags:
 - regulation
 feature_image: /images/content/images/2022/11/90C1B99C-D08F-4F2D-AD56-042914B8A7D2.jpeg
 feature_image_alt: Colorful turkeys in a vaguely anime-inspired style.
+feature_image_caption: AI-generated turkeys
 ghost_id: 637dbed7a503d9003db476b6
 ---
 

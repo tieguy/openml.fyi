@@ -9,6 +9,14 @@ tags:
 feature_image: /images/content/images/2025/11/31860000906_4efed54fed_c.jpg
 feature_image_alt: A large row of double-decker containers, mostly but not entirely
   green, on railcars curving into the distance.
+feature_image_caption: '<span style="white-space: pre-wrap;">"</span><a href="https://www.flickr.com/photos/21550937@N03/31860000906"
+  rel="noopener noreferrer"><span style="white-space: pre-wrap;">Green boxes just
+  before Christmas</span></a><span style="white-space: pre-wrap;">" by&nbsp;</span><a
+  href="https://www.flickr.com/photos/21550937@N03" rel="noopener noreferrer"><span
+  style="white-space: pre-wrap;">roy.luck</span></a><span style="white-space: pre-wrap;">&nbsp;is
+  licensed under&nbsp;</span><a href="https://creativecommons.org/licenses/by/2.0/?ref=openverse"
+  rel="noopener noreferrer"><span style="white-space: pre-wrap;">CC BY 2.0</span></a><span
+  style="white-space: pre-wrap;">.</span>'
 ghost_id: 691186a87d74350001ba6bb6
 ---
 

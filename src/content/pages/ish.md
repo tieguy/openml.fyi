@@ -11,6 +11,8 @@ tags:
 - power
 - community
 feature_image: /images/content/images/2022/10/LuisVilla4_blue_door_mostly_open_in_a_brick_building_oil_painti_9270ee1f-a0c8-42b7-b60f-49405b5d3757.png
+feature_image_caption: 'midjourney: blue door mostly open, in a brick building, oil
+  painting'
 featured: true
 ghost_id: 63434eba478f06003d51a5fe
 ---

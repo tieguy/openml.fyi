@@ -11,6 +11,7 @@ tags:
 feature_image: /images/content/images/2023/04/B205FB19-E092-4FE9-9C81-3BA262132E85.jpeg
 feature_image_alt: Sailboats in front of a church, with trees and birds, in the style
   of a pencil sketch.
+feature_image_caption: Pencil sketch of a "swedish post" via Midjourney.
 ghost_id: 643fe8720b4f75003d95356a
 ---
 
