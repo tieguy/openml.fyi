@@ -37,7 +37,7 @@ Netlify project `openml-fyi` (`a1c976c1-45a4-469b-adf9-ba5b76ed1171`), team
 ## How the content got here
 
 The archive was migrated off Ghost(Pro). Two tools in the
-[content-archive](https://github.com/tieguy/content-archive) repo produced it:
+[personal-archiving](https://github.com/tieguy/personal-archiving) repo produced it:
 
 - `scripts/backup_ghost.py` pulls every post, page, and image out of Ghost's
   public Content API into a raw JSON backup.
@@ -67,4 +67,4 @@ editing `src/content/` by hand.
 
 Full migration plan, including the phases and the decisions behind them:
 `docs/design-plans/2026-08-09-openml-fyi-ghost-to-static.md` in the
-content-archive repo.
+personal-archiving repo.
